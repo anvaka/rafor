@@ -1,0 +1,22 @@
+{
+  "name": "rafor",
+  "version": "1.0.0",
+  "description": "RequestAnimationFrame friendly async for iterator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "async",
+    "for",
+    "iterator",
+    "requestanimationframe",
+    "raf"
+  ],
+  "author": "Andrei Kashcha",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anvaka/rafor"
+  }
+}

@@ -1,9 +1,7 @@
 # rafor [![Build Status](https://travis-ci.org/anvaka/rafor.svg)](https://travis-ci.org/anvaka/rafor)
 
-requestAnimationFrame() friendly async for iterator.
-
 This project will allow you to iterate over huge arrays asynchronously without
-hanging main JavaScript event loop.
+impacting responsiveness of the application.
 
 # usage
 
@@ -29,7 +27,7 @@ function findMaxElement(array, cb) {
 
 The code above will attempt to limit its time spent within `visit()` function
 to `12 ms`. This will ensure that your main JavaScript thread is not 100% busy
-calculating maximum, and browser still has time to do other operations.
+calculating maximum, and the browser still has time to do other operations.
 
 ## Configuration
 

@@ -1,6 +1,6 @@
 {
   "name": "rafor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RequestAnimationFrame friendly async for iterator",
   "main": "index.js",
   "scripts": {

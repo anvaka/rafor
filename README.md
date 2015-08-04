@@ -1,4 +1,4 @@
-# rafor
+# rafor [![Build Status](https://travis-ci.org/anvaka/rafor.svg)](https://travis-ci.org/anvaka/rafor)
 
 requestAnimationFrame() friendly async for iterator.
 

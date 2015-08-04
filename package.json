@@ -4,7 +4,7 @@
   "description": "RequestAnimationFrame friendly async for iterator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap test/*.js"
   },
   "keywords": [
     "async",

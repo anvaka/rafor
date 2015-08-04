@@ -2,7 +2,7 @@ module.exports = asyncFor;
 
 /**
  * Iterates over array in async manner. This function attempts to maximize
- * number of elements visited withing single event loop cycle, while at the
+ * number of elements visited within single event loop cycle, while at the
  * same time tries to not exceed a time threshold allowed to stay within
  * event loop.
  *

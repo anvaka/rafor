@@ -26,7 +26,7 @@ function findMaxElement(array, cb) {
 ```
 
 The code above will attempt to limit its time spent within `visit()` function
-to `12 ms`. This will ensure that your main JavaScript thread is not 100% busy
+to `8 ms`. This will ensure that your main JavaScript thread is not 100% busy
 calculating maximum, and the browser still has time to do other operations.
 
 Unlike many other `async for` implementations, this iterator will attempt to
@@ -35,7 +35,7 @@ limiting itself to a given time quota.
 
 ## Configuration
 
-If you want to change time quota of `12 ms` to something different, you can
+If you want to change time quota of `8 ms` to something different, you can
 pass it as an optional argument:
 
 ``` js

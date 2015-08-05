@@ -11,24 +11,24 @@ module.exports = asyncFor;
  * @param {DoneCallback} doneCallback called when iterator has reached end of array.
  * @param {Object=} options - additional configuration:
  * @param {number} [options.step=1] - default iteration step
- * @param {number} [options.maxTimeMS=12] - maximum time (in milliseconds) which
+ * @param {number} [options.maxTimeMS=8] - maximum time (in milliseconds) which
  *   iterator should spend within single event loop.
- * @param {number} [options.probeElements=10000] - how many elements should iterator
+ * @param {number} [options.probeElements=5000] - how many elements should iterator
  *   visit to measure its iteration speed.
  */
 function asyncFor(array, visitCallback, doneCallback, options) {
   var start = 0;
+  var elapsed = 0;
   options = options || {};
   var step = options.step || 1;
-  var maxTimeMS = options.maxTimeMS || 12;
-  var pointsPerLoopCycle = options.probeElements || 10000;
+  var maxTimeMS = options.maxTimeMS || 8;
+  var pointsPerLoopCycle = options.probeElements || 5000;
   // we should never block main thread for too long...
   setTimeout(processSubset, 0);
 
   function processSubset() {
     var finish = Math.min(array.length, start + pointsPerLoopCycle);
     var i = start;
-    var elapsed = 0;
     var timeStart = new Date();
     for (i = start; i < finish; i += step) {
       visitCallback(array[i], i, array);

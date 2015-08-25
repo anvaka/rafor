@@ -55,7 +55,7 @@ asyncFor(array, visit, done, {
 
 Finally, iterator takes its opportunity to measure speed of your `visit()`
 callback during the first event loop cycle. By default it assumes that visiting
-10,000 elements should be fast enough to not impact responsiveness of the
+5,000 elements should be fast enough to not impact responsiveness of the
 browser, but if this number is too high or too low for your case, please give
 iterator a hint:
 

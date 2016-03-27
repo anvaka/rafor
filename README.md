@@ -63,7 +63,7 @@ iterator a hint:
 // Let's say our `visit()` is CPU intensive function, and we assume that
 // calling visit() five times will require 10 to 16 milliseconds (which
 // gives good FPS rate and responsiveess). We can tell the iterator, that
-// it can meause first five calls:
+// it can measure first five calls:
 asyncFor(array, visit, done, {
   probeElements: 5
 });
